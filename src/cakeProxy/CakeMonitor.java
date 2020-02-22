@@ -4,7 +4,7 @@ import java.rmi.*;
 import java.rmi.server.*;
 
 public class CakeMonitor extends UnicastRemoteObject implements RemoteBakery {
-	
+	//Set the unicoding
 	private static final long serialVersionUID = 1L;
 	RemoteBakery remoteBakery; 
 	
@@ -12,7 +12,7 @@ public class CakeMonitor extends UnicastRemoteObject implements RemoteBakery {
 		this.remoteBakery = remoteBakery;
 	}
 
-	
+	//A way to report out
 	public void report() {
 		try {
 			System.out.println("The cake is at: " + remoteBakery.getLocation());
@@ -24,11 +24,12 @@ public class CakeMonitor extends UnicastRemoteObject implements RemoteBakery {
 		
 	}
 
+	//Get the count
 	public int getCakeCount() throws RemoteException {
 		return remoteBakery.getCakeCount();
 	}
 
-
+	//Get the location
 	public String getLocation() throws RemoteException {
 		return remoteBakery.getLocation();
 	}

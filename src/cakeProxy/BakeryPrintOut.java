@@ -8,11 +8,14 @@ public class BakeryPrintOut {
 
 	public static void main(String[] args) throws RemoteException, MalformedURLException {
 		
+		//Set the locations
 		String[] location = {"rmi.santafe.bakery.com/bakery",
 							 "rmi.delaware.bakery.com/bakery",
 							 "rmi.columbus.bakery.com/bakery"};
 		
+		//Set up a monitor
 		CakeMonitor[] monitor = new CakeMonitor[location.length];
+		
 		
 		for(int i=0; i< location.length; i++) {
 			try {
